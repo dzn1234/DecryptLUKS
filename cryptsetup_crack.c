@@ -45,6 +45,11 @@ int main(int argc, char **argv)
         char pass[256];
 
         key_file = fopen(key_file_name, "r");
+        if(!key_file){
+            printf("File open error\n");
+            goto out;
+        }
+        
         for (;;)
         {
             memset(pass,0,sizeof(pass));
@@ -65,6 +70,7 @@ int main(int argc, char **argv)
                 break;
             }
         }
+        fclose(key_file);
     } while(0);
 
 out:
