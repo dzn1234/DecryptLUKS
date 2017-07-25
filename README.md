@@ -1,13 +1,13 @@
 # cryptsetup_crack
-crack the cryptsetup format's passphase
+crack the LUKS(Linux Unified Key Setup) Disk's passphase
 
 Compile:
-       gcc  -O2  -lcryptsetup  cryptsetup_crack.c  -o  cryptsetup_crack
+       gcc  -O2  -lcryptsetup  decrypt_luks.c  -o  decrypt_luks
 
 Run:
-       ./cryptsetup_crack  /dev/sdb?  wordlist_name
+       ./decrypt_luks  /dev/sdb?  wordlist_name
 
-Like: ./cryptsetup_crack /dev/sdb3 wordlist.txx
+Like: ./decrypt_luks /dev/sdb3 wordlist.txx
 
 For cryptsetup Install:
        sudo apt-get install libcryptsetup-dev
