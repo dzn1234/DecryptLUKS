@@ -14,7 +14,7 @@ int main(int argc, char **argv)
 
     if (argc < 2)
     {
-        printf("Usage: ./cryptsetup_crack device_name wordlist_file_name\n\n");
+        printf("Usage: ./decrypt_luks device_name wordlist_file_name\n\n");
         return 0;
     }
 
